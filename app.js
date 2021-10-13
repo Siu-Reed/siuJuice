@@ -9,7 +9,6 @@ const splash2 = document.querySelector(".juice .splash_front");
 const purchase = document.querySelector(".purchase");
 const description = document.querySelector(".info h3");
 const sizes = document.querySelector(".sizes");
-const sizeBtn = document.querySelector(".sizes button");
 
 //Moving Animation Event
 cardContainer.addEventListener("mousemove", (e) => {
@@ -42,7 +41,10 @@ cardContainer.addEventListener("mouseleave", (e) => {
     purchase.style.transform = "none";
 });
 
-sizeBtn.addEventListener('click', () => {
-    sizeBtn.style.background = "#fcdb58"
+sizes.addEventListener('click', (e) => {
+    const sizeBtn = e.target;
+    if (sizeBtn.classList.value === 'sizeBtn') {
+        sizeBtn.style.background = '#fcdb58';
+    } else return
 })
-purchase.addEventListener('click', () => {alert("사실 이런 주스는 없어요 :) 마음만으로 감사합니당.")})
+purchase.addEventListener('click', () => {alert("사실 이런 주스는 없어요 ㅎ; 마음만으로 감사합니당.")})
