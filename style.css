@@ -87,7 +87,7 @@ body {
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
     border-radius: 30px;
     cursor: pointer;
-    font-weight: bold;
+    font-weight: 500;
     color: #585858;
     width: 7em;
 }
@@ -181,5 +181,9 @@ body {
     .discription img {
         display: block;
         width: 100%;
+    }
+
+    .sizes button {
+        width: 5.2em;
     }
 }
