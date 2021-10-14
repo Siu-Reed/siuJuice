@@ -12,7 +12,7 @@ body {
     justify-content: center;
 }
 .cardWrapper {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -22,29 +22,32 @@ body {
 
 .cardContainer {
     width: 50%;
-    height: 100vh;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .card {
     transform-style: preserve-3d;
-    min-height: 80vh;
+    height: 80%;
     width: 35rem;
     border-radius: 30px;
     padding: 0rem 5rem;
     box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
 }
 
 .juice {
-    max-height: 35vh;
+    height: 45%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .juice img {
-    width: 30rem;
+    width:30rem;
     z-index: 2;
     transition: all 0.75s ease-out;
 }
@@ -53,9 +56,15 @@ body {
     position: absolute;
 }
 
+.info {
+    height: 55%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+}
+
 .info h1 {
     color : #303030;
-    margin-top: 1rem;
     font-size: 3rem;
     font-weight: 300;
     transition: all 0.75s ease-out;
@@ -63,18 +72,16 @@ body {
 .info h3 {
     font-size: 1.3rem;
     font-weight: 500;
-    padding: 2rem 0rem;
+    padding: 0 0 1.5em 0;
     color: #585858;
     transition: all 0.75s ease-out;
 }
 .sizes {
-    margin-top: 2em;
     display: flex;
     justify-content: space-between;
     transition: all 0.75s ease-out;
 }
 .sizes button {
-    background: none;
     padding: 0.7em 0;
     border: none;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
@@ -89,14 +96,13 @@ body {
     color: white;
 }
 .purchase {
-    margin-top: 3em;
     transition: all 0.75s ease-out;
 }
 .purchase button {
     transition: 0.5s;
     width: 100%;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-    padding: 1rem 0;
+    padding: 0.8em 0;
     font-size: 1.2rem;
     background: #fcdb58;
     border: none;
@@ -110,11 +116,28 @@ body {
     background: #ffffff;
 }
 
+.discription {
+    width: 100%;
+    pointer-events: none;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.discription img {
+    display: block;
+    width: 860px;
+}
+
 .ponJuice {
     padding: 3em 0;
     width: 100%;
     text-align: center;
     background: #fcdb58;
+
+    pointer-events: none;
+    user-select: none;
 }
 
 .ponJuice h3 {
@@ -125,4 +148,38 @@ body {
 .ponJuice p {
     color: rgba(0, 0, 0, 0.3);
     font-weight: 300;
+}
+
+.copyright {
+    background: #ffd119;
+    width: 100%;
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 0.5em 0;
+
+    pointer-events: none;
+    user-select: none;
+}
+
+@media screen and (max-width:860px) {
+
+    html {
+        font-size: 14px;
+    }
+
+    .cardContainer {
+        width: 100%;
+        overflow: hidden;
+    }
+    .card {
+        transform-style: preserve-3d;
+        width: 90%;
+        height: 90%;
+        padding: 0 2em;
+    }
+
+    .discription img {
+        display: block;
+        width: 100%;
+    }
 }
