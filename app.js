@@ -12,19 +12,19 @@ const sizes = document.querySelector(".sizes");
 
 //Moving Animation Event
 cardContainer.addEventListener("mousemove", (e) => {
-    let xAxis = (window.innerWidth / 2 - e.pageX) / 25;
+    let xAxis = (window.innerWidth / 2 - e.pageX) / 18;
     card.style.transform = `rotateY(${xAxis}deg)`;
 });
 //Animate In
 cardContainer.addEventListener("mouseenter", (e) => {
     card.style.transition = "none";
   //Popout
-    title.style.transform = "translateZ(150px)";
-    splash1.style.transform = "translateZ(50px) rotateZ(-10deg)";
-    splash2.style.transform = "translateZ(100px) rotateZ(10deg)";
-    carton.style.transform = "translateZ(200px) rotateZ(-45deg)";
-    description.style.transform = "translateZ(125px)";
-    sizes.style.transform = "translateZ(100px)";
+    title.style.transform = "translateZ(9rem)";
+    splash1.style.transform = "translateZ(3rem) rotateZ(-10deg)";
+    splash2.style.transform = "translateZ(6rem) rotateZ(10deg)";
+    carton.style.transform = "translateZ(12rem) rotateZ(-45deg)";
+    description.style.transform = "translateZ(4rem)";
+    sizes.style.transform = "translateZ(6rem)";
     purchase.style.transform = "translateZ(75px)";
 });
 //Animate Out
