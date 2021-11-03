@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transform-style: inherit;
 }
 
 body {
@@ -11,6 +12,7 @@ body {
     align-items: center;
     justify-content: center;
 }
+
 .cardWrapper {
     width: 100vw;
     height: 100vh;
